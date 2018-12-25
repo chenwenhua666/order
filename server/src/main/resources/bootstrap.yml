@@ -1,0 +1,32 @@
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://localhost:8761/eureka/
+#  instance:
+#    hostname: orderName
+#    prefer-ip-address: true
+#    instance-id: 192.168.2.174:order
+#spring:
+#  application:
+#    name: order
+#  datasource:
+#    driver-class-name: com.mysql.jdbc.Driver
+#    url: jdbc:mysql://127.0.0.1:3306/sell?characterEncoding=utf-8&useSSL=false&serverTimezone=GMT
+#    username: root
+#    password: 123456
+#  jpa:
+#    show-sql: true
+#    hibernate:
+#     ddl-auto: update
+#PRODUCT:
+#  ribbon:
+#    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+spring:
+  application:
+    name: ORDER
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: CONFIG
+      profile: test
