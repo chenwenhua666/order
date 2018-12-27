@@ -1,4 +1,4 @@
-package com.plm.order.message;
+package com.plm.order.message.foundation;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.core.AmqpTemplate;
