@@ -33,5 +33,14 @@ spring:
         enabled: true
         service-id: CONFIG
       profile: test
-
-
+  rabbitmq:
+    host: 127.0.0.1
+    username: guest
+    password: guest
+    port: 5672
+    publisher-confirms: true
+    publisher-returns: true
+    template:
+      mandatory: true
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
