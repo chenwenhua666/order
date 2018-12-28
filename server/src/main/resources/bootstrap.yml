@@ -33,6 +33,16 @@ spring:
         enabled: true
         service-id: CONFIG
       profile: test
+    stream:
+      bindings:
+        myStreamOutputMessage:
+          group: order
+          content-type: application/json
+          destination: streamMessage
+        myStreamInputMessage:
+          group: order
+          content-type: application/json
+          destination: streamMessage
   rabbitmq:
     host: 127.0.0.1
     username: guest
