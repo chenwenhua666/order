@@ -38,19 +38,22 @@ spring:
         myStreamOutputMessage:
           group: order
           content-type: application/json
-          destination: streamMessage
+          #destination: streamMessage
         myStreamInputMessage:
           group: order
           content-type: application/json
-          destination: streamMessage
+          #destination: streamMessage
   rabbitmq:
     host: 127.0.0.1
     username: guest
     password: guest
     port: 5672
-    publisher-confirms: true
-    publisher-returns: true
-    template:
-      mandatory: true
+    #publisher-confirms: true
+    #publisher-returns: true
+    #template:
+      #mandatory: true
+  redis:
+    host: 127.0.0.1
+    port: 6379
 mybatis:
   mapper-locations: classpath:mapper/*.xml
