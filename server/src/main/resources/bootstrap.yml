@@ -15,7 +15,7 @@
 #    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
 ribbon:
   ReadTimeout: 120000
-  ConnectTimeout: 30000
+  ConnectTimeout: 60000
 eureka:
   client:
     service-url:
