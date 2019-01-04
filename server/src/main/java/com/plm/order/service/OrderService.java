@@ -9,4 +9,6 @@ import com.plm.order.dto.OrderDTO;
  */
 public interface OrderService {
     OrderDTO create(OrderDTO orderDTO);
+
+    OrderDTO finish(String orderId);
 }
