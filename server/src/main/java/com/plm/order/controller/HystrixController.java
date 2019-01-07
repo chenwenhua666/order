@@ -24,14 +24,14 @@ public class HystrixController {
         @HystrixProperty(name="execution.isolation.thread.timeoutInMilliseconds", value = "6000")
     })
     */
-    /*
+
     @HystrixCommand(commandProperties = {
             @HystrixProperty(name="circuitBreaker.enabled",value = "true"),
             @HystrixProperty(name="circuitBreaker.requestVolumeThreshold",value = "10"),
             @HystrixProperty(name="circuitBreaker.sleepWindowInMilliseconds",value = "10000"),
             @HystrixProperty(name="circuitBreaker.errorThresholdPercentage",value = "60"),
-    })*/
-    @HystrixCommand
+    })
+    //@HystrixCommand
     @GetMapping("/getProductInfoList")
     public String getProductInfoList(@RequestParam Integer number){
         if (number > 1) {

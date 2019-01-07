@@ -72,3 +72,11 @@ hystrix:
 feign:
   hystrix:
     enabled: true
+#http://127.0.0.1:8081/hystrix
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+
