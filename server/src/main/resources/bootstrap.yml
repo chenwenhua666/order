@@ -52,8 +52,23 @@ spring:
     #publisher-returns: true
     #template:
       #mandatory: true
-  redis:
-    host: 127.0.0.1
-    port: 6379
+  #redis:
+    #host: 127.0.0.1
+    #port: 6379
 mybatis:
   mapper-locations: classpath:mapper/*.xml
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 10000
+    getProductInfoList:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 6000
+feign:
+  hystrix:
+    enabled: true

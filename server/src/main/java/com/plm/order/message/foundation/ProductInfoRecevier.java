@@ -37,10 +37,10 @@ public class ProductInfoRecevier {
     public void receiveMessage(String message){
         List<ProductInfoOutput> productInfoOutputList = JSON.parseArray(message,ProductInfoOutput.class);
         log.info("收到消息：{}",productInfoOutputList);
-        for (ProductInfoOutput productInfoOutput : productInfoOutputList) {
+        /*for (ProductInfoOutput productInfoOutput : productInfoOutputList) {
             stringRedisTemplate.opsForValue().set(
                 String.format(PRODUCT_STOCK_TEMPLATE,productInfoOutput.getProductId()),
                 String.valueOf(productInfoOutput.getProductStock()));
-        }
+        }*/
     }
 }
