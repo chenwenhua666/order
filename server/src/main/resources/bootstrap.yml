@@ -44,7 +44,7 @@ spring:
           content-type: application/json
           #destination: streamMessage
   rabbitmq:
-    host: 127.0.0.1
+    host: 192.168.2.175
     username: guest
     password: guest
     port: 5672
@@ -52,11 +52,11 @@ spring:
     #publisher-returns: true
     #template:
       #mandatory: true
-  #redis:
-    #host: 127.0.0.1
-    #port: 6379
+  redis:
+    host: 192.168.2.175
+    port: 6379
   zipkin:
-    base-url: http://127.0.0.1:9411/
+    base-url: http://192.168.2.175:9411
   sleuth:
     sampler:
       probability: 1
@@ -86,4 +86,5 @@ management:
 logging:
   level:
     org.springframework.cloud.openfeign: debug
-
+server:
+  port: 8084
